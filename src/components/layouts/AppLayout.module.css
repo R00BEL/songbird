@@ -1,0 +1,25 @@
+.appLayout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #016671;
+}
+
+.footer {
+  background: #016671;
+}
+
+.logo {
+  height: 48px;
+}

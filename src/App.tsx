@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { AppLayout } from "./components/layouts/AppLayout";
 import { Home } from "@songbird/pages/Home";
+import { Game } from "@songbird/pages/Game";
 
 const router = createBrowserRouter([
   {
@@ -9,6 +10,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/game",
+        element: <Game />,
       },
     ],
   },
