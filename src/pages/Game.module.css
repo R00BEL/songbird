@@ -1,0 +1,57 @@
+.game {
+  padding: 1rem;
+}
+
+.button {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2222222222;
+  display: inline-block;
+  color: #026670;
+  background-color: #fce181;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0.625rem;
+  padding: 0.9375rem 1.25rem;
+  transition: all 0.3s ease 0s;
+}
+
+.check {
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.levels {
+  display: flex;
+  width: 100%;
+
+  border: 1px solid #00c0ff;
+  border-radius: 4px;
+
+  margin-top: 1rem;
+
+  overflow: hidden;
+}
+
+.level {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  padding: 0.5rem;
+  background: #016671;
+
+  cursor: pointer;
+  border: 1px solid #00c0ff;
+}
+
+.selectedLevel {
+  background: #20303a;
+}
+
+.checkAndButton {
+  display: flex;
+  justify-content: space-between;
+}
