@@ -25,6 +25,7 @@
 
 .levels {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 
   border: 1px solid #00c0ff;
@@ -39,12 +40,14 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  min-width: 100px;
 
-  padding: 0.5rem;
   background: #016671;
-
   cursor: pointer;
   border: 1px solid #00c0ff;
+
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 
 .selectedLevel {
