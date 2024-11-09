@@ -7,7 +7,7 @@
   font-weight: 600;
   line-height: 1.2222222222;
   display: inline-block;
-  color: #026670;
+  color: var(--element-backend-colour);
   background-color: #fce181;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 0.625rem;
@@ -28,11 +28,9 @@
   flex-wrap: wrap;
   width: 100%;
 
-  border: 1px solid #00c0ff;
-  border-radius: 4px;
-
-  margin-top: 1rem;
-
+  border: 1px solid var(--border-color);
+  border-radius: var(--element-border-radius);
+  margin: 1rem 0;
   overflow: hidden;
 }
 
@@ -42,16 +40,16 @@
   justify-content: center;
   min-width: 100px;
 
-  background: #016671;
+  background: var(--element-backend-colour);
   cursor: pointer;
-  border: 1px solid #00c0ff;
+  border: 1px solid var(--border-color);
 
   padding: 0.5rem;
   box-sizing: border-box;
 }
 
 .selectedLevel {
-  background: #20303a;
+  background: var(--background-color);
 }
 
 .checkAndButton {

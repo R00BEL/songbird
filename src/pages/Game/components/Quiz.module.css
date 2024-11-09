@@ -1,0 +1,13 @@
+.question {
+  background: var(--element-backend-colour);
+
+  border: 2px solid var(--border-color);
+  border-radius: var(--element-border-radius);
+
+  display: flex;
+  padding: 1rem;
+  gap: 3rem;
+}
+
+.nameAndAudioPlayer {
+}

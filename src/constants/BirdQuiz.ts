@@ -1,6 +1,6 @@
 import Levels from "@songbird/constants/Levels";
 
-interface BirdI {
+export interface BirdI {
   id: number;
   name: string;
   species: string;

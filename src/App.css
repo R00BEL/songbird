@@ -1,7 +1,16 @@
+:root {
+  --background-color: #20303a;
+  --element-backend-colour: #016671;
+
+  --border-color: #00c0ff;
+
+  --element-border-radius: 0.25rem;
+}
+
 body {
   margin: 0;
   place-items: center;
-  background: #20303a;
+  background: var(--background-color);
   color: white;
   font-family: "Montserrat", sans-serif;
 

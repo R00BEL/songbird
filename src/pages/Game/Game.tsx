@@ -1,7 +1,9 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import cx from "classnames";
 import styles from "./Game.module.css";
 import TypesOfLevels from "@songbird/constants/TypesOfLevels";
+import { Quiz } from "@songbird/pages/Game/components/Quiz";
+import BirdQuiz from "@songbird/constants/BirdQuiz";
 
 interface LevelsI {
   type: TypesOfLevels;
@@ -29,6 +31,11 @@ export const Game = () => {
     [],
   );
 
+  const currentLevel = useMemo(
+    () => BirdQuiz.find((bq) => bq.level === selectedType)!,
+    [selectedType],
+  );
+
   return (
     <div className={styles.game}>
       <div className={styles.checkAndButton}>
@@ -48,6 +55,8 @@ export const Game = () => {
           </div>
         ))}
       </div>
+
+      <Quiz birds={currentLevel.birds} />
     </div>
   );
 };
