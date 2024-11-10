@@ -8,12 +8,12 @@ interface Props {
 }
 
 export const Quiz = memo(({ birds }: Props) => {
-  const [csBirds, setCsBirds] = useState<BirdI[]>();
+  const [shuffleBirds, setShuffleBirds] = useState<BirdI[]>();
 
   useEffect(() => {
     const shuffleArray = birds.sort(() => Math.random() - 0.5);
 
-    setCsBirds(oc);
+    setShuffleBirds(shuffleArray);
   }, [birds]);
 
   return (
@@ -30,7 +30,14 @@ export const Quiz = memo(({ birds }: Props) => {
         </div>
       </div>
 
-      <div>questions</div>
+      <div className={styles.birdsAndDescription}>
+        <div className={styles.birds}>
+          {birds.map((bird) => (
+            <div className={styles.bird}>{bird.name}</div>
+          ))}
+        </div>
+        <div className={styles.description}>описание птицы</div>
+      </div>
 
       <button>следующий уровень</button>
     </div>

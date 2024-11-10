@@ -11,3 +11,30 @@
 
 .nameAndAudioPlayer {
 }
+
+.birdsAndDescription {
+  display: flex;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.bird {
+  padding: 0.5rem 1rem;
+
+  background: var(--element-backend-colour);
+
+  border: 2px solid var(--border-color);
+  border-radius: var(--element-border-radius);
+}
+
+.birds {
+  max-width: 300px;
+  flex: 1;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+
+.description {
+  flex: 1;
+}

@@ -1,4 +1,4 @@
-import Levels from "@songbird/constants/Levels";
+import TypesOfLevels from "@songbird/constants/TypesOfLevels";
 
 export interface BirdI {
   id: number;
@@ -10,13 +10,13 @@ export interface BirdI {
 }
 
 interface BirdQuizI {
-  level: Levels;
+  level: TypesOfLevels;
   birds: BirdI[];
 }
 
 const BirdQuiz: BirdQuizI[] = [
   {
-    level: Levels.WARM_UP,
+    level: TypesOfLevels.WARM_UP,
     birds: [
       {
         id: 1,
@@ -84,7 +84,7 @@ const BirdQuiz: BirdQuizI[] = [
     ],
   },
   {
-    level: Levels.SPARROWS,
+    level: TypesOfLevels.SPARROWS,
     birds: [
       {
         id: 1,
@@ -154,7 +154,7 @@ const BirdQuiz: BirdQuizI[] = [
     ],
   },
   {
-    level: Levels.FOREST,
+    level: TypesOfLevels.FOREST,
     birds: [
       {
         id: 1,
@@ -222,7 +222,7 @@ const BirdQuiz: BirdQuizI[] = [
     ],
   },
   {
-    level: Levels.SINGING,
+    level: TypesOfLevels.SINGING,
     birds: [
       {
         id: 1,
@@ -290,7 +290,7 @@ const BirdQuiz: BirdQuizI[] = [
     ],
   },
   {
-    level: Levels.PREDATORS,
+    level: TypesOfLevels.PREDATORS,
     birds: [
       {
         id: 1,
@@ -359,7 +359,7 @@ const BirdQuiz: BirdQuizI[] = [
     ],
   },
   {
-    level: Levels.SEA,
+    level: TypesOfLevels.SEA,
     birds: [
       {
         id: 1,
