@@ -2,7 +2,10 @@
   "compilerOptions": {
     "paths": {
       "@songbird/*": ["./src/*"]
-    }
+    },
+    "types": [
+      "vite-plugin-svgr/client"
+    ]
   },
   "extends": "./tsconfig.base.json",
   "references": [{ "path": "./tsconfig.node.json" }]

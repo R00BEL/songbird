@@ -1,5 +1,8 @@
 import { useRef, useState, useCallback, useMemo, memo } from "react";
 
+import PlayCircleIcon from "../assets/playCircle.svg?react";
+import PauseCircleIcon from "../assets/pauseCircle.svg?react";
+
 interface Props {
   scr: string;
 }
@@ -69,7 +72,9 @@ export const AudioPlayer = memo(({ scr }: Props) => {
 
   return (
     <div>
-      <button onClick={togglePlayPause}>{isPlaying ? "Pause" : "Play"}</button>
+      <div onClick={togglePlayPause}>
+        {isPlaying ? <PlayCircleIcon /> : <PauseCircleIcon />}
+      </div>
       <span>{formattedCurrentTime}</span>
       <input
         type="range"
