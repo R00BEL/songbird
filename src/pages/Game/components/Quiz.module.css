@@ -10,6 +10,7 @@
 }
 
 .nameAndAudioPlayer {
+  flex: 1;
 }
 
 .birdsAndDescription {
@@ -37,4 +38,15 @@
 
 .description {
   flex: 1;
+}
+
+.birdName {
+  color: #fce181;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0.9375rem;
+  padding-bottom: 0.625rem;
+  margin-bottom: 0.9375rem;
+  border-bottom: 1px solid #000;
 }

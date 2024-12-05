@@ -1,0 +1,15 @@
+.audioPlayer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  user-select: none;
+}
+
+.volumeRange {
+}

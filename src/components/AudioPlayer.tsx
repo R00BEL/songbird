@@ -1,7 +1,10 @@
 import { useRef, useState, useCallback, useMemo, memo } from "react";
+import styles from "./AudioPlayer.module.css";
 
 import PlayCircleIcon from "../assets/playCircle.svg?react";
 import PauseCircleIcon from "../assets/pauseCircle.svg?react";
+import VolumeOffIcon from "../assets/volumeOff.svg?react";
+import VolumeUpIcon from "../assets/volumeOff.svg?react";
 
 interface Props {
   scr: string;
@@ -71,10 +74,15 @@ export const AudioPlayer = memo(({ scr }: Props) => {
   }, [duration]);
 
   return (
-    <div>
-      <div onClick={togglePlayPause}>
-        {isPlaying ? <PlayCircleIcon /> : <PauseCircleIcon />}
+    <div className={styles.audioPlayer}>
+      <div onClick={togglePlayPause} className={styles.button}>
+        {isPlaying ? (
+          <PlayCircleIcon width={60} height={60} />
+        ) : (
+          <PauseCircleIcon width={60} height={60} />
+        )}
       </div>
+
       <span>{formattedCurrentTime}</span>
       <input
         type="range"
@@ -84,6 +92,12 @@ export const AudioPlayer = memo(({ scr }: Props) => {
         onChange={handleSeekChange}
       />
       <span>{formattedDuration}</span>
+
+      {volume === 0 ? (
+        <VolumeOffIcon width={40} height={40} />
+      ) : (
+        <VolumeUpIcon width={40} height={40} />
+      )}
       <input
         type="range"
         min="0"
@@ -91,7 +105,9 @@ export const AudioPlayer = memo(({ scr }: Props) => {
         step="0.01"
         value={volume}
         onChange={handleVolumeChange}
+        className={styles.volumeRange}
       />
+
       <audio
         ref={audioRef}
         src={scr}

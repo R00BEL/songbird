@@ -23,7 +23,7 @@ export const Quiz = memo(({ birds }: Props) => {
           <img src={"./plug.jpg"} alt={"bird photo"} />
         </div>
         <div className={styles.nameAndAudioPlayer}>
-          <div>1</div>
+          <div className={styles.birdName}>*****</div>
           <div>
             <AudioPlayer scr={""} />
           </div>
